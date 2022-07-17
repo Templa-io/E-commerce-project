@@ -35,16 +35,13 @@ const ReactMainSlider = (props) => {
         })}
       </Slider>
       <Scrollbar>
-        <MdKeyboardArrowLeft
-          size={40}
-          className="slider-icon left "
-          onClick={slideLeft}
-        />
-        <MdKeyboardArrowRight
-          size={40}
-          className="slider-icon right"
-          onClick={slideRight}
-        />
+        <p size={40} className="slider-icon left " onClick={slideLeft}>
+          BACK
+        </p>
+
+        <p size={40} className="slider-icon right" onClick={slideRight}>
+          <span>NEXT</span>
+        </p>
       </Scrollbar>
     </MainSliderContainer>
   );
@@ -89,6 +86,17 @@ const SliderCardBody = styled.div`
   padding: 5px;
 `;
 const Scrollbar = styled.div`
+  position: relative;
+  display: flex;
   margin: -50px;
-  padding-right: ;
+  margin-right: 50px;
+  padding-right: 40px;
+  p {
+    font-size: 15px;
+    padding: 5px;
+    color: black;
+  }
+  span {
+    color: gray;
+  }
 `;
