@@ -88,4 +88,7 @@ const SliderCardBody = styled.div`
   height: 100px;
   padding: 5px;
 `;
-const Scrollbar = styled.div``;
+const Scrollbar = styled.div`
+  margin: -50px;
+  padding-right: ;
+`;
