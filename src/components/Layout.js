@@ -52,11 +52,11 @@ export default ReactMainSlider;
 
 const Slider = styled.div`
   width: 100%;
-  height: 100%;
+  height: 500px;
   white-space: nowrap;
   overflow-x: scroll;
-  scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 `;
 const MainSliderContainer = styled.div`
   position: relative;

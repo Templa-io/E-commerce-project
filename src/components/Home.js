@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Button } from "./Buttons";
-import Products from "./Products";
-import Stu from "../assets/c.webp";
+// import Products from "./Products";
+import Stu from "../assets/C1.png";
 
 function Home() {
   return (
@@ -13,9 +13,7 @@ function Home() {
           <h1>
             CHERNER <span>ARMCHAIR</span>
           </h1>
-          <p>
-            Enim pariatur mollit duis eiusmod incididunt magna esse eu dolore
-          </p>
+          <p>Enim pariatur mollit duis eiusmod incididunt magna</p>
           <Button to="/products" primary="true">
             <b>VIEW MORE</b>
           </Button>
@@ -24,7 +22,7 @@ function Home() {
           <img src={Stu} alt="product" />
         </ColumnRight>
       </Container>
-      <Products />
+      {/* <Products /> */}
     </Section>
   );
 }
@@ -32,12 +30,12 @@ function Home() {
 export default Home;
 const Section = styled.section`
   width: 100%;
-  background: light;
   height: 100%;
-  padding: 0rem 6rem;
+  padding: 0 10rem;
 `;
 const Container = styled.div`
   padding: 3rem calc((100vw-1300px) / 2);
+  background: lightgray;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 400px;
@@ -48,6 +46,7 @@ const Container = styled.div`
 `;
 const ColumnLeft = styled.div`
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -57,7 +56,7 @@ const ColumnLeft = styled.div`
   h1 {
     margin-bottom: 1rem;
     color: gray;
-    font-size: clamp(1.5rem, 6vw, 3rem);
+    font-size: 2rem;
   }
   span {
     color: black;
@@ -68,14 +67,14 @@ const ColumnLeft = styled.div`
   }
 `;
 const ColumnRight = styled.div`
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
 
   img {
     width: 400px;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
 
     @media screen and (max-width: 768) {
