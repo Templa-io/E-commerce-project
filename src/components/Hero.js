@@ -17,7 +17,7 @@ function Hero() {
             </Button>
           </ColumnLeft>
           <ColumnRight>
-            <img src={Cat} alt="product" />
+            <img src={Cat} alt="product" width="100%" />
           </ColumnRight>
         </Container>
       </Section>
@@ -31,7 +31,7 @@ const Section = styled.section`
   width: 100%;
   background: light;
   height: 100%;
-  margin-top: 2rem;
+  margin: 2rem;
 `;
 const Container = styled.div`
   display: grid;
@@ -55,14 +55,16 @@ const ColumnLeft = styled.div`
   margin-bottom: 5rem;
 
   h {
-    margin-bottom: 1rem;
     color: black;
     font-size: 30px;
+    padding-left: 2rem;
   }
 
   p {
     margin-bottom: 2rem;
     color: gray;
+
+    padding-left: 2rem;
   }
 `;
 const ColumnRight = styled.div`

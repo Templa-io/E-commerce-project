@@ -8,6 +8,9 @@ import Hero from "./components/Hero";
 import Product from "./components/product";
 import ReactMainSlider from "./components/ReactMainSlider";
 import Layout from "./components/Layout";
+import Information from "./components/Information";
+import Footer from "./components/Footer";
+import MainFooter from "./components/MainFooter";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
           <ReactMainSlider />
           <Hero />
           <Layout />
+          <Information />
+          <Footer />
+          <MainFooter />
         </Route>
       </Router>
     </>

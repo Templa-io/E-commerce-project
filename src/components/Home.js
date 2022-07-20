@@ -54,7 +54,7 @@ const ColumnLeft = styled.div`
   padding: 1rem 2rem;
 
   h1 {
-    margin-bottom: 1rem;
+    margin-left: 2rem;
     color: gray;
     font-size: 2rem;
   }
@@ -62,15 +62,13 @@ const ColumnLeft = styled.div`
     color: black;
   }
   p {
+    margin-left: 2rem;
     margin-bottom: 2rem;
     color: gray;
   }
 `;
 const ColumnRight = styled.div`
-  padding: 1rem 4rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
 
   img {
     width: 400px;
