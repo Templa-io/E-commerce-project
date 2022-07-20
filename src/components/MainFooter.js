@@ -14,17 +14,16 @@ function MainFooter() {
         </BodyContent>
         <BodyContent>
           <h>CUSTOMER SERVICE</h>
-          <p>News</p>
-          <p>Show rooms</p>
-          <p>Our studio</p>
-          <p>Histories</p>
+          <p>Contact Us</p>
+          <p>Services</p>
+          <p>Register/Login</p>
+          <p>FAQs</p>
         </BodyContent>
         <BodyContent>
           <h>FURNITURE</h>
-          <p>News</p>
-          <p>Show rooms</p>
-          <p>Our studio</p>
-          <p>Histories</p>
+          <p>Chairs</p>
+          <p>Tables</p>
+          <p>Storage</p>
         </BodyContent>
         <BodyContent>
           <h>ACCESORIES</h>
@@ -44,14 +43,26 @@ const MainContainer = styled.div`
   padding: 10rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
+  @media screen and (max-width: 760px) {
+    grid-template-columns: 1fr;
+  }
 `;
 const BodyContent = styled.div`
-  text-align: center;
+  text-align: left;
+  padding-left:5rem;
+
 
   h {
     font-weight: bold;
   }
   p {
-    inline-height: 1.5px;
+    margin-top: 2rem;
+    font-size: 14px;
+    line-height: 0px;
+    transition: 0.3s !important;
+    &:hover {
+        background: ${({ primary }) => (primary ? "#F26A2E" : "#F26A2E")};
+        transform: translateY(-2px);
   }
 `;
