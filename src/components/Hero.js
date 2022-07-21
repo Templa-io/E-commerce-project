@@ -48,6 +48,8 @@ const Section = styled.div`
 const ColumnLeft = styled.div`
   display: flex;
   flex-direction: column;
+  background: lightgray;
+
   justify-content: center;
   align-items: flex-start;
   line-height: 1.4;
