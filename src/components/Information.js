@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components/macro";
 import { Button } from "./Buttons";
+import { FormControl } from "react-bootstrap";
 
 function Information() {
+  const [value, setValue] = useState("");
+
   return (
     <>
       <Section>
@@ -10,7 +13,7 @@ function Information() {
           <h1>KEEP UPDATED</h1>
           <p>Enim pariatur mollit duis eiusmod incididunt magna</p>
           <Label>
-            <Input></Input>
+            <Input type="text" />
             <Placeholder>Enter your name</Placeholder>
             <SubscriberButton>Subscriber</SubscriberButton>
           </Label>
@@ -24,22 +27,21 @@ function Information() {
 
 export default Information;
 const Section = styled.section`
-  width: 100%;
-  padding: 0 10rem;
   align-items: center;
   display: flex;
-  margin: 0rem;
+  justify-content: center;
+  background: lightgray;
+  margin: 0rem 10rem;
 `;
 const Container = styled.div`
   background: lightgray;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 100%;
   height: 300px;
   text-align: center;
   justify-content: center;
   line-height: 1.4;
-  padding: 10rem;
 
   h1 {
     font-size: 20px;
