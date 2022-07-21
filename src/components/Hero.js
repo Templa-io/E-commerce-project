@@ -7,19 +7,17 @@ function Hero() {
   return (
     <>
       <Section>
-        <Container>
-          <ColumnLeft>
-            <h>DREXEL</h>
-            <p>PETS SLEEPING BAG</p>
+        <ColumnLeft>
+          <h>DREXEL</h>
+          <p>PETS SLEEPING BAG</p>
 
-            <Button to="/products" primary="true">
-              <b>VIEW MORE</b>
-            </Button>
-          </ColumnLeft>
-          <ColumnRight>
-            <img src={Cat} alt="product" width="100%" />
-          </ColumnRight>
-        </Container>
+          <Button to="/products" primary="true">
+            <b>VIEW MORE</b>
+          </Button>
+        </ColumnLeft>
+        <ColumnRight>
+          <img src={Cat} alt="product" width="100%" />
+        </ColumnRight>
       </Section>
     </>
   );
@@ -27,15 +25,17 @@ function Hero() {
 
 export default Hero;
 
-const Section = styled.section`
-  width: 100%;
-  background: light;
-  height: 100%;
-  margin: 2rem;
-`;
-const Container = styled.div`
+// const Section = styled.section`
+//   width: 100%;
+//   justify-content: center;
+//   background: lightgray;
+//   margin: 0 10rem;
+// `;
+const Section = styled.div`
   display: grid;
   background: lightgray;
+  justify-content: center
+  max-width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 400px;
   margin: 0 10rem;
