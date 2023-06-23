@@ -3,27 +3,64 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Button } from "./Buttons";
 // import Products from "./Products";
+import {faArrowLeft, faArrowRight} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "font-awesome/css/font-awesome.min.css";
 import Stu from "../assets/C1.png";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import PaypalComponents from "./PaypalComponents";
+import { useState } from "react";
 
 function Home() {
+  const [showPaypalButton, setShowPaypalButton] = useState(false);
+
+
+  const initialOptions = {
+    clientId: "AbTjWFpRNzdIiU3xIOgfARgNbxK4JY5KgcO9A1lwYph9SAlFKMEhxTVbI9FPEVxdsaFTtfPKMk8MXHLQ",
+    currency: "USD",
+    intent: "capture",
+};
+
+const handleBuyNowClick = () => {
+  setShowPaypalButton((prevState) => !prevState);
+};
   return (
+    <PayPalScriptProvider options={initialOptions}>
     <Section>
-      <ColumnLeft>
+      <ColumnLeft className="items-start w=[80%]">
         <h1>
           CHERNER <span>ARMCHAIR</span>
         </h1>
         <p>Enim pariatur mollit duis eiusmod incididunt magna</p>
-        <Button to="/products" primary="true">
-          <b>VIEW MORE</b>
-        </Button>
+        <strong >$399.0</strong>
+        <button className="bg-[#FFE8A9] px-16 p-2 mt-4 font-semibold mb-4"
+        onClick={handleBuyNowClick} primary="true">
+          Buy now
+        </button>
+        {showPaypalButton && <PaypalComponents />}
       </ColumnLeft>
       <ColumnRight>
+       <FontAwesomeIcon icon={faArrowLeft} className=" pt-32 text-[#999999]"/>
+      <div className="mt-52"> 
+       
+      </div>
+    
         <img src={Stu} alt="product" />
+       <FontAwesomeIcon icon={faArrowRight} className="pt-32" />
+        <div className=" 
+        rotate-90 text-xl font-semibold
+        ">
+        <span className="text-3xl font-bold">01</span>
+        <span className="text-[#999999] font-bold">/03</span>
+        </div>
+        <button className="absolute bottom-0 right-0 py-2 px-12 bg-[#FFE192] text-m" >Add to cart +</button>
       </ColumnRight>
 
       {/* <Products /> */}
     </Section>
-  );
+ 
+    </PayPalScriptProvider>
+     );
 }
 
 export default Home;
@@ -54,7 +91,7 @@ const ColumnLeft = styled.div`
   padding: 1rem 2rem;
 
   h1 {
-    margin-left: 2rem;
+  
     color: gray;
     font-size: 2rem;
   }
@@ -62,7 +99,7 @@ const ColumnLeft = styled.div`
     color: black;
   }
   p {
-    margin-left: 2rem;
+ 
     margin-bottom: 2rem;
     color: gray;
   }
